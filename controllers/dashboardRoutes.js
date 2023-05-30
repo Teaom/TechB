@@ -38,7 +38,7 @@ router.get('/', async (req, res) => {
     
         const posts = postData.get({ plain: true });
     // res.json(posts)
-        res.render('editpost', {
+        res.render('editPost', {
           posts,
         });
       } catch (err) {
