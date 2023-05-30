@@ -38,7 +38,7 @@ console.log('clickedDel')
         document.location.replace('/dashboard')
     } else {
         console.log(response)
-        console.log('post post could not be deleted')
+        console.log('post could not be deleted')
     }
     
 }

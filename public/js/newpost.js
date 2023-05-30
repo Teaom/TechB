@@ -23,5 +23,5 @@ console.log(title, body, 'consolelog')
 
 // Event listener for form submit
 document
-    .querySelector('#newPosty')
+    .querySelector('#newPost')
     .addEventListener('click', newpost)

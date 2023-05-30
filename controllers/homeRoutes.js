@@ -41,12 +41,12 @@ router.get('/comments', async (req, res) => {
 
     // Serialize data so the template can read it
     const comments = commentData.map((post) => comment.get({ plain: false }));
-res.json(comments)
+// res.json(comments)
     // Pass serialized data and session flag into template
-    // res.render('homepage', { 
-    //   posts, 
-    //   logged_in: req.session.logged_in 
-    // });
+    res.render('homepage', { 
+      posts, 
+      logged_in: req.session.logged_in 
+    });
   } catch (err) {
     res.status(500).json(err);
   }
@@ -116,8 +116,7 @@ router.get('/signup', (req, res) => {
 });
 
 router.get('/newpost', (req, res) => {
-  res.render('newpost')
-}
-)
+  res.render('newpost');
+});
 
 module.exports = router;
