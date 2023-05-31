@@ -1,29 +1,24 @@
+
+
 <div>
-<nav>
-<a href="/">Home</a>
-{{#if logged_in}}
-<a href="/" id="logout"> Logout</a>
-<a href="/dashboard">Dashboard</a>
-<a href="/newpost">NewPost</a>
-{{else}}
-<a href="/login"> Login</a>
-<a href="/signup">SignUp</a>
-{{/if}}
-</nav>
+    <nav>
+        <a href="/">Home</a>
+        {{#if logged_in}}
+        <a href="/" id="logout"> Logout</a>
+        <a href="/dashboard">Dashboard</a>
+        <a href="/newpost">New Post</a>
+        {{else}}
+        <a href="/login"> Login</a>
+        <a href="/signup">Sign Up</a>
+        {{/if}}
+    </nav>
+ <br>
     {{#each posts}}
-    <div class="divs">
-    <h2>
-        {{title}}
-    </h2>
-    <h3>
-        {{username}}
-    </h3>
-    <h3>
-        {{body}}
-    </h3>
-    
-    <a href="/post/{{id}}">comments</a>
-    
+    <div class="card">
+        <h2>{{title}}</h2>
+        <h3>{{username}}</h3>
+        <p>{{body}}</p>
+        <a href="/post/{{id}}">comments</a>
     </div>
     {{/each}}
 </div>
