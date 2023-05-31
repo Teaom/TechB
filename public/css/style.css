@@ -1,5 +1,5 @@
 body {
-    background-color: lightslategrey;
+    background-color: rgb(172, 193, 213);
 }
 
 div {
@@ -8,4 +8,10 @@ div {
     justify-content: center;
     align-items: center;
 }
-
+    .card {
+        border: 5px solid #544c3d;
+        padding: 10px;
+        margin-bottom: 10px;
+        background-color: bisque;
+        /* margin-right: 50%; */
+    }
