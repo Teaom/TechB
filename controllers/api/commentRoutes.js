@@ -16,24 +16,24 @@ router.post('/', withAuth, async (req, res) => {
     }
   });
 
-  router.get('/:id', withAuth, async (req, res) => {
-    try {
-      const comments = await Comment.findAll({
-        postId:req.params.id,
-      });
+  // router.get('/:id', withAuth, async (req, res) => {
+  //   try {
+  //     const comments = await Comment.findAll({
+  //       postId:req.params.id,
+  //     });
  
-      
-     const cleanComments = comments.map((comment) => comment.get({ plain: true }));
+  //     console.log(comments, "Test")
+  //    const cleanComments = comments.map((comment) => comment.get({ plain: true }));
      
-     console.log('comments testing', cleanComments)
-      res.render('singlePost', { 
-        cleanComments,
-      });
-    } catch (err) {
-      console.log(err)
-      res.status(400).json(err);
-    }
-  });
+  //    console.log('comments testing', cleanComments)
+  //     // res.render('singlePost', { 
+  //     //   cleanComments,
+  //     // });
+  //   } catch (err) {
+  //     console.log(err)
+  //     res.status(400).json(err);
+  //   }
+  // });
 
 
 

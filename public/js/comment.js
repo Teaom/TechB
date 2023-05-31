@@ -17,7 +17,8 @@ console.log('clicked')
         })
 
         if (response.ok) {
-            document.location.reload()
+            // document.location.reload()
+            console.log('test')
         } else {
             alert('Comment could not be added')
         }
@@ -25,13 +26,13 @@ console.log('clicked')
 }
 
 
-const getComments = async() => {
-    console.log(id)
-    const response = await fetch(`/api/comments/${id}`);
-    console.log(response)
-}
+// const getComments = async() => {
+//     console.log(id)
+//     const response = await fetch(`/api/comments/${id}`);
+//     console.log(response)
+// }
 
-getComments();
+// getComments();
 
 // Event listener for form submit
 document
